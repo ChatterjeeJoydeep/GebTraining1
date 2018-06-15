@@ -13,4 +13,15 @@ class DemoHomeSpec extends GebSpec {
         then:
         basicText. getAttribute('innerText').contains("BASIC")
     }
+    def "go to simple form demo page"() {
+        when:
+        to DemoHomePage
+
+        and:
+        clickOnSimpleFormDemo()
+        sleep(500)
+
+        then:
+        at SimpleFormPage
+    }
 }

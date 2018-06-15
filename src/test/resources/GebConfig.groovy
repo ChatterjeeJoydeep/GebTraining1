@@ -8,7 +8,7 @@
 import org.openqa.selenium.chrome.ChromeDriver
 
 waiting {
-	timeout = 2
+	timeout = 10
 }
 
 environments {

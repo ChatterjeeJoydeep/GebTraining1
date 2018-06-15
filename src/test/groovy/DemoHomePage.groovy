@@ -8,6 +8,8 @@ class DemoHomePage extends Page {
         startPractisingButton { $('a#btn_basic_example') }
         basicText{$('span', text:contains("BASIC"))}
         interExampleButton{$('a#btn_inter_example')}
+        inputFormsButton { $('a',text:contains("Input Forms"),0) }
+        simpleFormDemoButton { $('a',text:contains("Simple Form Demo"),0) }
     }
 
     def clickOnStartPractising(){
@@ -17,6 +19,16 @@ class DemoHomePage extends Page {
         startPractisingButton.click()
 
     }
+    def clickOnSimpleFormDemo(){
+        waitFor{
+            inputFormsButton
+        }
+        inputFormsButton.click()
+        waitFor{
+            simpleFormDemoButton
+        }
+        simpleFormDemoButton.click()
 
+    }
 
 }
